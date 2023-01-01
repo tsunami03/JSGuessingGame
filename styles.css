@@ -1,0 +1,167 @@
+* {
+  box-sizing: border-box;
+  background-color: whitesmoke;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.navbar {
+  border-bottom: 3px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+}
+
+.info {
+  margin: 22px;
+  text-align: center;
+  font-size: 30px;
+}
+
+.rulebox {
+  display: flex;
+  justify-content: center;
+  border-top: 3px solid black;
+
+  margin-bottom: 30px;
+  flex-direction: column;
+}
+
+ul {
+  margin: auto;
+}
+
+li {
+  line-height: 30px;
+}
+
+h2 {
+  text-align: center;
+}
+
+.gamebox {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  max-width: fit-content;
+  max-height: fit-content;
+  row-gap: 15px;
+  column-gap: 15px;
+  margin: auto;
+  margin-bottom: 50px;
+}
+
+.box {
+  height: 55px;
+  width: 55px;
+  border: 3px solid silver;
+  font-size: 32px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.correct {
+  background: darkgreen;
+  color: white;
+}
+
+.close {
+  background: goldenrod;
+  color: white;
+}
+
+.close {
+  background: goldenrod;
+  color: white;
+}
+
+.wrong {
+  background: #888;
+  color: white;
+}
+
+.invalid {
+  animation: flash 1s;
+}
+
+@keyframes flash {
+  5% {
+    border-color: crimson;
+  }
+  100% {
+    border-color: silver;
+  }
+}
+
+.loading {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border: 3px solid grey;
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 0.7s infinite linear;
+  visibility: hidden;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.show {
+  visibility: visible;
+}
+
+@keyframes rainbow {
+  100%,
+  0% {
+    color: rgb(255, 0, 0);
+  }
+  8% {
+    color: rgb(255, 127, 0);
+  }
+  16% {
+    color: rgb(255, 255, 0);
+  }
+  25% {
+    color: rgb(127, 255, 0);
+  }
+  33% {
+    color: rgb(0, 255, 0);
+  }
+  41% {
+    color: rgb(0, 255, 127);
+  }
+  50% {
+    color: rgb(0, 255, 255);
+  }
+  58% {
+    color: rgb(0, 127, 255);
+  }
+  66% {
+    color: rgb(0, 0, 255);
+  }
+  75% {
+    color: rgb(127, 0, 255);
+  }
+  83% {
+    color: rgb(255, 0, 255);
+  }
+  91% {
+    color: rgb(255, 0, 127);
+  }
+}
+
+.gameWon {
+  animation: rainbow 2s infinite linear;
+}
